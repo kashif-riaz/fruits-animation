@@ -1,0 +1,235 @@
+/* main container */
+.main-container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+
+/* Default styling for the boxes */
+.box {
+  cursor: pointer;
+  position: relative;
+  transition: all 0.75s ease-in-out;
+  overflow: hidden;
+}
+
+/* Change box size on hover */
+.box:hover {
+  width: 40%;
+}
+
+.container:hover .box {
+  width: 30%;
+}
+
+.container .box:hover {
+  flex: 30%;
+}
+
+.glass-image-transfrom {
+  position: absolute;
+  top: 50%;
+  right: -20%;
+  transform: translateY(-50%);
+  overflow: hidden;
+  transition: all 0.75s ease-in-out;
+}
+
+.box:hover .glass-image-transfrom {
+  top: 50%;
+  right: 20%;
+  transform: translateY(-50%);
+}
+
+.glass-image-transfrom-straweberry {
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  transform: translateY(-50%);
+  overflow: hidden;
+  transition: all 0.75s ease-in-out;
+}
+
+.orange:hover + .strawberry .glass-image-transfrom-straweberry {
+  top: 50%;
+  left: 80%;
+}
+
+.main-container:has(.cookies:hover) .strawberry .glass-image-transfrom-straweberry {
+  top: 50%;
+  left: 80%;
+}
+
+.orange {
+  width: 30%;
+  background: radial-gradient(50.11% 52.23% at 65.1% 50%, #fff 0%, #ffc443 100%);
+}
+
+.strawberry {
+  width: 40%;
+  background: radial-gradient(50.2% 54.01% at 70.42% 50%, #fff 0%, rgba(206, 5, 0, 0.7) 100%);
+}
+
+.cookies {
+  width: 30%;
+  background: radial-gradient(50% 50% at 50% 50%, #fff 26.56%, rgba(137, 98, 92, 0.7) 100%);
+}
+
+/* Apply styling for all Orange images */
+.img-orange {
+  position: absolute;
+  transition: all 0.75s ease-in-out;
+}
+
+/* Positioning each image */
+.top-left-orange {
+  top: 5%;
+  left: -5%;
+}
+
+.box:hover .top-left-orange {
+  transform: rotate(-40deg);
+}
+
+.top-right-orange {
+  top: 3%;
+  right: 3%;
+}
+
+.box:hover .top-right-orange {
+  transform: rotate(-60deg) translateX(40%);
+  top: 10%;
+  right: 20%;
+}
+
+.center-left-orange {
+  bottom: 25%;
+  left: 0;
+}
+
+.box:hover .center-left-orange {
+  transform: rotate(-40deg);
+}
+
+.bottom-left-orange {
+  bottom: -5%;
+  left: 25%;
+}
+
+.box:hover .bottom-left-orange {
+  transform: rotate(-40deg);
+}
+
+/* Apply styling for all strawberry  images */
+.img-strawberry {
+  position: absolute;
+  transition: all 0.75s ease-in-out;
+}
+
+/* Positioning each image */
+.top-right-strawberry {
+  top: -6%;
+  left: 35%;
+}
+
+.orange:hover + .strawberry .top-right-strawberry {
+  transform: rotate(30deg);
+}
+
+.main-container:has(.cookies:hover) .strawberry .top-right-strawberry {
+  transform: rotate(30deg);
+}
+
+.top-40-strawberry {
+  top: 20%;
+  left: -8%;
+}
+
+.orange:hover + .strawberry .top-40-strawberry {
+  transform: rotate(30deg);
+}
+
+.main-container:has(.cookies:hover) .strawberry .top-40-strawberry {
+  transform: rotate(30deg);
+}
+
+.bottom-20-strawberry {
+  bottom: 15%;
+  left: 5%;
+}
+
+.orange:hover + .strawberry .bottom-20-strawberry {
+  transform: rotate(30deg);
+}
+
+.main-container:has(.cookies:hover) .strawberry .bottom-20-strawberry {
+  transform: rotate(30deg);
+}
+
+.bottom-strawberry {
+  bottom: -4%;
+  right: 25%;
+}
+
+.orange:hover + .strawberry .bottom-strawberry {
+  transform: rotate(30deg);
+}
+
+.main-container:has(.cookies:hover) .strawberry .bottom-strawberry {
+  transform: rotate(30deg);
+}
+
+/* Apply styling for all Cookies  images */
+.img-cookies {
+  position: absolute;
+  transition: all 0.75s ease-in-out;
+}
+
+.top-right-cookies {
+  top: -5%;
+  right: 25%;
+}
+
+.box:hover .top-right-cookies {
+  transform: rotate(-40deg);
+}
+
+.top-10-cookies {
+  top: 5%;
+  left: 0%;
+}
+
+.bottom-20-cookies {
+  bottom: 20%;
+  left: -12%;
+}
+
+.box:hover .bottom-20-cookies {
+  transform: rotate(-40deg);
+}
+
+.bottom-cookies {
+  bottom: -2%;
+  right: 10%;
+}
+
+.box:hover .bottom-cookies {
+  transform: rotate(-40deg);
+  right: 18%;
+}
+
+@media screen and (max-width: 1440px) {
+  .glass-image-transfrom {
+    width: 200px;
+    height: auto;
+  }
+  .glass-image-transfrom-straweberry {
+    width: 180px;
+    height: auto;
+  }
+  .img-strawberry,
+  .img-orange,
+  .img-cookies {
+    width: 120px;
+  }
+}/*# sourceMappingURL=main.css.map */
